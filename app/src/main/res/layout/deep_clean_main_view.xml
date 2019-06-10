@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bolim="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/deep_clean_main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/deep_clean_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/deep_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <FrameLayout
+                    android:id="@+id/ll_ram_container"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true">
+
+                    <com.bilim.expandablelist.view.ArcDrawable
+                        android:id="@+id/ram_arc"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        bolim:arcStartAngle="120"
+                        bolim:arcSweepAngle="300"
+                        bolim:bottomText="Ram"
+                        bolim:bottomTextSize="8sp"
+                        bolim:defaultProcess="0"
+                        bolim:processTextSize="16sp"
+                        bolim:strokeWidth="4dp"
+                        bolim:suffixTextPaddingLeft="2dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/show_ram_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:singleLine="true"
+                        android:text="ram calculating"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/ll_ram_container"
+                    >
+
+                    <com.bilim.expandablelist.view.ArcDrawable
+                        android:id="@+id/storage_arc"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        bolim:arcStartAngle="120"
+                        bolim:arcSweepAngle="300"
+                        bolim:bottomText="Storage"
+                        bolim:bottomTextSize="8sp"
+                        bolim:defaultProcess="0"
+                        bolim:processTextSize="20sp"
+                        bolim:strokeWidth="4dp"
+                        bolim:suffixTextPaddingLeft="2dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/show_storage_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/storage_arc"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:singleLine="true"
+                        android:text="storage calculating"/>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/deep_clean_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#FF3692C8"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expandable list"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <TextView
+            android:id="@+id/deep_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:text="Selected items will be cleared"
+            android:textColor="#FF3692C8"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/file_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+    </android.support.v7.widget.RecyclerView>
+</android.support.design.widget.CoordinatorLayout>
+
+

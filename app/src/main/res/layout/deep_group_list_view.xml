@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:padding="2dp"
+    >
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/arrow_down"
+        />
+
+    <ImageView
+        android:id="@+id/file_list_image"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_arrow"
+        android:src="@drawable/default_file"/>
+    <RelativeLayout
+        android:id="@+id/group_item_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/file_list_image"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="52dp">
+        
+        <TextView
+            android:id="@+id/file_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:layout_alignParentLeft="true"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/file_list_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:text="summary"/>
+    </RelativeLayout>
+    
+    <ProgressBar
+        android:id="@+id/hori_progress"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="52dp"
+        android:layout_toRightOf="@id/file_list_image"
+        android:layout_below="@id/group_item_expand"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/horizontal_progress_bar_background"
+        style="@android:style/Widget.Material.ProgressBar.Horizontal"/>
+            
+    <FrameLayout
+        android:id="@+id/option_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp">
+        <CheckBox
+            android:id="@+id/file_list_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:indeterminateDrawable="@drawable/progress_loading_background"/>
+        <ImageView
+            android:id="@+id/middle_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:visibility="gone"
+            android:src="@drawable/middle"
+            />
+    </FrameLayout>
+</RelativeLayout>

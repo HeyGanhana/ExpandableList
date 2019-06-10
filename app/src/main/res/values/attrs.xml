@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcDrawable">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="arcStartAngle" format="float"/>
+        <attr name="arcSweepAngle" format="float"/>
+        <attr name="defaultProcess" format="integer"/>
+        <attr name="processTextSize" format="dimension"/>
+        <attr name="bottomText" format="string"/>
+        <attr name="bottomTextSize" format="dimension"/>
+        <attr name="innerArcColor" format="color"/>
+        <attr name="outerArcColor" format="color"/>
+        <attr name="suffixText" format="string"/>
+        <attr name="suffixTextPaddingLeft" format="dimension"/>
+    </declare-styleable>
+</resources>
